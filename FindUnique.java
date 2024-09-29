@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+public class FindUnique {
     static int findUnique(int[] arr) {
         int n = arr.length;
         
