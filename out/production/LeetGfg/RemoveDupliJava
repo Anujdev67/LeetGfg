@@ -1,0 +1,47 @@
+class Solution{
+public static int removeDuplicates(int[] nums){
+if(nums.length == 0){
+return 0;
+    }
+int i =0;
+for(int j =i;j<nums.length;j++){
+if(nums[j]!=nums[i]){
+i++;
+nums[i] = nums[j];
+	}
+}
+return i+1;
+	}
+}
+
+//2. Find Missing numbers
+class Solution{
+public static int findMissingNumbers(int[] nums){
+int n = nums.length;
+int expectedSum = (n*(n+1))/2;
+int actualSum = 0;
+for(int wanted : nums){
+actualSum += wanted;
+}
+return expectedSum - actualSum;
+	}
+}
+
+//  3 . Put 0's to the end
+
+class Solution{
+public static void MoveZeroes(int[] nums){
+int index = 0;
+for(int num : nums){
+if(num!=0){
+nums[index] = num;
+index++;
+    }
+}
+while(index < nums.length){
+nums[index] = 0;
+index++;
+	}
+   }
+}
+
